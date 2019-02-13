@@ -1,0 +1,155 @@
+$header-height: 45px;
+$green: #278d03;
+
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: $header-height;
+}
+
+
+.header__site-name {
+  width: 100px;
+  line-height: $header-height;
+  margin-left: 10px;
+  font-size: 1.1em;
+  font-weight: bolder;
+}
+
+
+.header__logo-right {
+  img {
+    height: $header-height;
+  }
+}
+
+
+.sep-line {
+  margin: 10px 0 10px 10px;
+  border-bottom: 1px solid gray;
+}
+
+
+.kpi-box {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+
+.kpi-box__left {
+  width: 40vw;
+  text-align: center;
+
+  img {
+    height: 100px;
+  }
+}
+
+
+.kpi-box__right {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+
+.kpi-box__right__line1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: right;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+
+.kpi-box__right__line2 {
+  text-align: right;
+  font-size: 1.2em;
+  color: $green;
+  font-weight: bold;
+}
+
+
+.block-header {
+  margin-left: 10px;
+}
+
+
+.activity-list {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+.activity-list__header {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+
+.activity-list__header__no1 {
+  width: 60vw;
+  text-align: left;
+}
+
+
+.activity-list__header__no2 {
+  text-align: right;
+  flex-grow: 1;
+  margin-right: 25px;
+}
+
+
+.activity-list__entry {
+  display: grid;
+  margin-top: 10px;
+}
+
+
+.activity-list__entry__description {
+  grid-column-start: 1;
+  grid-column-end: center;
+  grid-row-start: 1;
+  grid-row-end: content-end;
+
+  width: 60%;
+}
+
+
+.activity-list__entry__right {
+  grid-column-start: center;
+  grid-column-end: end;
+  grid-row-start: 1;
+  grid-row-end: content-end;
+
+  display: flex;
+  flex-flow: column;
+}
+
+
+.activity-list__entry__buttons {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: content-end;
+  grid-row-end: end;
+
+  display: flex;
+  flex-flow: row;
+
+  button {
+    flex-grow: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    background-color: #278d03;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    outline: none;
+  }
+}

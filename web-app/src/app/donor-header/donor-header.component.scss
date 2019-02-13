@@ -1,0 +1,53 @@
+$header-height: 45px;
+
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: $header-height;
+}
+
+
+.header__site-name {
+  width: 100px;
+  line-height: $header-height;
+  margin-left: 10px;
+  font-size: 1.1em;
+  font-weight: bolder;
+}
+
+
+.header__menu-button {
+  outline: none;
+  color: black;
+}
+
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: $header-height;
+  width: 100vw;
+  height: 100vh!important;
+
+  background-color: white;
+  opacity: 0.95;
+}
+
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+
+.menu__list__entry {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 60px;
+  text-align: center;
+}
+
+

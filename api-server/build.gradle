@@ -1,0 +1,56 @@
+// This plugin is important to build a JAR that contains everything we need.
+plugins {
+    id 'com.github.johnrengelman.shadow' version '2.0.4'
+    id 'java'
+}
+
+group 'byson'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+
+mainClassName = 'byson.api.core.Main'
+
+configurations {
+    shadowJar.archiveName = 'api-server.jar'
+}
+
+ext {
+    jettyVersion = '9.4.9.v20180320'
+    jerseyVersion = '2.27'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // Jetty: an embedded servlet container and web server
+    compile "org.eclipse.jetty:jetty-server:${jettyVersion}"
+    compile "org.eclipse.jetty:jetty-servlet:${jettyVersion}"
+    compile "org.eclipse.jetty:jetty-servlets:${jettyVersion}"
+
+    // Jersey: framework for REST services and an implementation of JAX-RS
+    compile "org.glassfish.jersey.media:jersey-media-json-jackson:${jerseyVersion}"
+    compile "org.glassfish.jersey.core:jersey-server:${jerseyVersion}"
+    compile "org.glassfish.jersey.inject:jersey-hk2:${jerseyVersion}"
+    compile "org.glassfish.jersey.containers:jersey-container-servlet-core:${jerseyVersion}"
+    compile "org.glassfish.jersey.containers:jersey-container-jetty-http:${jerseyVersion}"
+
+    // Jackson
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.5'
+    compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-jaxb-annotations'
+
+    // javax.json: a JSON library
+    compile group: 'javax.json', name: 'javax.json-api', version: '1.1.2'
+    compile group: 'org.glassfish', name: 'javax.json', version: '1.1.2'
+
+    // Various
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+}
