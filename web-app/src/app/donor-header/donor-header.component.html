@@ -1,6 +1,7 @@
 <header class="header">
-  <div class="header__site-name">
-  </div>
+  <button type="button" class="header__menu-button" (click)="isCollapsed = !isCollapsed">
+    <i class="fas fa-bars"></i>
+  </button>
 
   <div class="header__logo-right">
     <img src="assets/bioson_logo.png" alt="logo">
@@ -10,23 +11,12 @@
 <div class="sep-line"></div>
 
 
-<!--<header class="header">
-  <div class="header__site-name">
-    Byson
-  </div>
-
-  <button type="button" class="header__menu-button" (click)="isCollapsed = !isCollapsed">
-    <i class="fas fa-bars"></i>
-  </button>
-</header>
-
 <div
         class="menu"
         [collapse]="isCollapsed"
 >
   <div class="menu__list">
-    <div class="menu__list__entry"><i class="fas fa-home"></i> Home</div>
-    <div class="menu__list__entry"><i class="fas fa-hand-holding-usd"></i> My Donations</div>
-    <div class="menu__list__entry"><i class="fas fa-heart"></i> Help More Bisons!</div>
+    <div class="menu__list__entry" (click)="navigate('/donor/home')"><i class="fas fa-home"></i> Home</div>
+    <div class="menu__list__entry" (click)="navigate('/donor/environment')"><i class="fas fa-hand-holding-usd"></i> My Impact</div>
   </div>
-</div>-->
+</div>

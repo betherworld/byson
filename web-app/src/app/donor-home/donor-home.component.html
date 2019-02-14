@@ -21,7 +21,7 @@
 </div>
 
 <div class="token-collection">
-  <div class="token-collection__entry" *ngFor="let token of data.wildLifeCollection">
+  <div class="token-collection__entry" *ngFor="let token of data.wildLifeCollection" (click)="onWildLifeTokenClick(token)">
     <img src="assets/{{ token.image }}">
   </div>
 </div>

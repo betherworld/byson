@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-ranger-dashboard',
@@ -9,9 +10,12 @@ export class RangerDashboardComponent implements OnInit {
   numberEther: number = 7.8065;
   numberRan: number = 25;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  onProofClicked() {
+    this.router.navigateByUrl('/ranger/proof');
+  }
 }

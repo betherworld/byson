@@ -40,4 +40,8 @@ export class DonorHomeComponent implements OnInit {
   onBisonTokenClick(token) {
     this.router.navigateByUrl('/bison/' + token.id);
   }
+
+  onWildLifeTokenClick(token: { image: string; id: string }) {
+    this.router.navigateByUrl('/wildlife/' + token.id);
+  }
 }

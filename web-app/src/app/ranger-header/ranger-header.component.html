@@ -1,11 +1,33 @@
 <header class="header">
-  <div class="header__site-name">
-    <span style="color: #000;">{{ siteNameBlack }}</span><span class="our-green">{{ siteNameGreen }}</span>
-  </div>
+  <button type="button" class="header__menu-button" (click)="isCollapsed = !isCollapsed">
+    <i class="fas fa-bars"></i>
+  </button>
+
+
+
 
   <div class="header__logo-right">
+    <span style="color: #000;">{{ siteNameBlack }}</span><span class="our-green">{{ siteNameGreen }}</span>
     <img src="assets/ranger_logo.png" alt="logo">
   </div>
 </header>
 
 <div class="sep-line"></div>
+
+
+<div
+        class="menu"
+        [collapse]="isCollapsed"
+>
+  <div class="menu__list">
+    <div class="menu__list__entry" (click)="navigate('home')">
+      <i class="fas fa-home"></i> Home
+    </div>
+    <div class="menu__list__entry" (click)="navigate('impact')">
+      <i class="fas fa-users"></i> Community
+    </div>
+    <div class="menu__list__entry"(click)="navigate('community-vote')">
+      <i class="fas fa-vote-yea"></i> Voting
+    </div>
+  </div>
+</div>

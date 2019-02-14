@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
+import {FinfourService} from "../finfour.service";
 
 
 const google: any = (<any> window).google;
@@ -44,12 +45,14 @@ export class BisonDashboardComponent implements OnInit {
   lng: number = 25.530117;
 
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private serv: FinfourService) {}
 
 
   async ngOnInit() {
     this.route.params.subscribe(params => {
       this.bison = this.BISONS[params.bison_id];
     });
+
+    console.log(this.serv);
   }
 }
