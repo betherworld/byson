@@ -14,6 +14,7 @@ import { DonorImpactDashboardComponent } from './donor-impact-dashboard/donor-im
 import { DonorHomeComponent } from './donor-home/donor-home.component';
 import { AgmCoreModule } from '@agm/core';
 import { RangerProofComponent } from './ranger-proof/ranger-proof.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { RangerProofComponent } from './ranger-proof/ranger-proof.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
 
     CollapseModule.forRoot(),
     ProgressbarModule.forRoot(),

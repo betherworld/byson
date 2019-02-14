@@ -15,7 +15,7 @@
 <h3 class="our-red block-header">Wildlife Collection</h3>
 
 <div class="token-collection">
-  <div class="token-collection__entry" *ngFor="let token of data.bisonCollection">
+  <div class="token-collection__entry" *ngFor="let token of data.bisonCollection" (click)="onBisonTokenClick(token)">
     <img src="assets/{{ token.image }}">
   </div>
 </div>

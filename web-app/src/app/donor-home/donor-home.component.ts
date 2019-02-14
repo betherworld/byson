@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-donor-home',
@@ -31,9 +32,12 @@ export class DonorHomeComponent implements OnInit {
     donationAddress: '0xd12Cd8A37F074e7eAF618C996Ff82C666191bd',
   };
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  onBisonTokenClick(token) {
+    this.router.navigateByUrl('/bison/' + token.id);
+  }
 }

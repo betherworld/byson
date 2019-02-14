@@ -20,15 +20,10 @@
 <h3 class="block-header" style="margin-top: 20px">Proof</h3>
 
 <div class="block">
-  <form>
-    <textarea class="comment-textarea" placeholder="Comment..."></textarea>
-  </form>
-
-
-
+  <textarea class="comment-textarea" placeholder="Comment..." [(ngModel)]="comment"></textarea>
   <div class="button-bar">
-    <button class="button-bar__take-picture"><i class="fas fa-camera"></i></button>
-    <button class="button-bar__upload-picture"><i class="fas fa-upload"></i></button>
-    <button class="button-bar__send">Send</button>
+    <input id="proof-photo" #photo class="proof-photo" type="file" accept="image/*" (change)="onPhotoAdded()">
+    <label for="proof-photo" class="button-bar__take-picture"><i class="fas fa-camera"></i></label>
+    <button class="button-bar__send" (click)="onSendClicked()">Send</button>
   </div>
 </div>

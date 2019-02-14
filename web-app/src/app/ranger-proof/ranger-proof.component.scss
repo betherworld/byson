@@ -36,10 +36,18 @@ $green: #278d03;
   flex-direction: row;
 }
 
-.button-bar__take-picture, .button-bar__upload-picture {
+
+.proof-photo {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+}
+
+
+.button-bar__take-picture {
   width: 40px;
   height: 40px;
-  font-size: 1.4em;
+  font-size: 2.2em;
   margin-right: 10px;
   background: none;
   outline: none;
