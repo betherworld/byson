@@ -25,27 +25,10 @@ $header-height: 45px;
 }
 
 
-/*
-
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: $header-height;
-}
-
-
-.header__site-name {
-  width: 100px;
-  line-height: $header-height;
-  margin-left: 10px;
-  font-size: 1.1em;
-  font-weight: bolder;
-}
-
-
 .header__menu-button {
   outline: none;
+  background: none;
+  border: none;
   color: black;
 }
 
@@ -75,4 +58,4 @@ $header-height: 45px;
   height: 60px;
   text-align: center;
 }
-*/
+

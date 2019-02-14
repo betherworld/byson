@@ -15,6 +15,11 @@ import { DonorHomeComponent } from './donor-home/donor-home.component';
 import { AgmCoreModule } from '@agm/core';
 import { RangerProofComponent } from './ranger-proof/ranger-proof.component';
 import { FormsModule } from "@angular/forms";
+import { RangerLoginComponent } from './ranger-login/ranger-login.component';
+import { DonorLoginComponent } from './donor-login/donor-login.component';
+import { WildlifeDashboardComponent } from './wildlife-dashboard/wildlife-dashboard.component';
+import { DonorEnvironmentComponent } from './donor-environment/donor-environment.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { FormsModule } from "@angular/forms";
     RangerVotingComponent,
     DonorImpactDashboardComponent,
     DonorHomeComponent,
-    RangerProofComponent
+    RangerProofComponent,
+    RangerLoginComponent,
+    DonorLoginComponent,
+    WildlifeDashboardComponent,
+    DonorEnvironmentComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+
 
 @Component({
   selector: 'app-donor-header',
@@ -9,10 +11,14 @@ export class DonorHeaderComponent implements OnInit {
   isCollapsed = true;
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 
   ngOnInit() {
   }
 
+
+  navigate(donorEnvironment: string) {
+    this.router.navigateByUrl(donorEnvironment);
+  }
 }
