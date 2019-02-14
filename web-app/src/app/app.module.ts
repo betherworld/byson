@@ -19,6 +19,7 @@ import { RangerLoginComponent } from './ranger-login/ranger-login.component';
 import { DonorLoginComponent } from './donor-login/donor-login.component';
 import { WildlifeDashboardComponent } from './wildlife-dashboard/wildlife-dashboard.component';
 import { DonorEnvironmentComponent } from './donor-environment/donor-environment.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DonorEnvironmentComponent } from './donor-environment/donor-environment
     RangerLoginComponent,
     DonorLoginComponent,
     WildlifeDashboardComponent,
-    DonorEnvironmentComponent
+    DonorEnvironmentComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
