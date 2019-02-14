@@ -1,0 +1,65 @@
+<header class="header">
+  <div class="header__site-name">
+  </div>
+
+  <div class="header__logo-right">
+    <img src="assets/bioson_logo.png" alt="logo">
+  </div>
+</header>
+
+<div class="sep-line"></div>
+
+<div class="block1">
+  <div class="block1__img">
+    <img src="assets/{{ LEVELS[data.level].image }}">
+  </div>
+  <div class="block1__text">
+    <p>Level: <span class="emp-text-red">{{ LEVELS[data.level].name }}</span></p>
+    <p>Donated: {{ data.donated }}</p>
+  </div>
+</div>
+
+
+<h3 class="our-red block-header">Wildlife Collection</h3>
+
+<div class="token-collection">
+  <div class="token-collection__entry" *ngFor="let token of data.bisonCollection">
+    <img src="assets/{{ token.image }}">
+  </div>
+</div>
+
+<div class="token-collection">
+  <div class="token-collection__entry" *ngFor="let token of data.wildLifeCollection">
+    <img src="assets/{{ token.image }}">
+  </div>
+</div>
+
+
+<h3 class="our-red block-header">Statistics 2019</h3>
+
+<div class="statistics-list">
+  <div class="statistics-list__entry">
+    <div class="statistics-list__entry__img"><i class="fas fa-leaf"></i></div>
+    <div class="statistics-list__entry__number">
+      {{ data.statistics2019.co2Reduction }}
+    </div>
+    <div class="statistics-list__entry__label">CO2 Reduction</div>
+  </div>
+  <div class="statistics-list__entry">
+    <div class="statistics-list__entry__img"><i class="fas fa-crow"></i></div>
+    <div class="statistics-list__entry__number">
+      {{ data.statistics2019.wildLifeIncrease }}
+    </div>
+    <div class="statistics-list__entry__label">Wild Life Increase</div>
+  </div>
+</div>
+
+
+
+<h3 class="our-red block-header">Donate</h3>
+
+<div class="block">
+  <div>To donate, transfer ETH to:</div>
+
+  <div class="donation-address">{{ data.donationAddress }}</div>
+</div>
