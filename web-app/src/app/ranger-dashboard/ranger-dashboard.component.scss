@@ -1,29 +1,4 @@
-$header-height: 45px;
 $green: #278d03;
-
-
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: $header-height;
-}
-
-
-.header__site-name {
-  width: 100px;
-  line-height: $header-height;
-  margin-left: 10px;
-  font-size: 1.1em;
-  font-weight: bolder;
-}
-
-
-.header__logo-right {
-  img {
-    height: $header-height;
-  }
-}
 
 
 .kpi-box {

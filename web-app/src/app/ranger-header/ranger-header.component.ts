@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-ranger-header',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ranger-header.component.scss']
 })
 export class RangerHeaderComponent implements OnInit {
+  @Input()
+  siteNameBlack: string;
+
+  @Input()
+  siteNameGreen: string;
+
 
   constructor() { }
 

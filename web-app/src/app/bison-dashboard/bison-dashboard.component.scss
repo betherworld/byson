@@ -1,0 +1,31 @@
+.block1 {
+  display: flex;
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-right: 5px;
+}
+
+
+.block1__img {
+  font-size: 3em;
+
+  img {
+    height: 100px;
+  }
+}
+
+
+.block1__text {
+  margin-left: 20px;
+  font-size: 1.2em;
+
+  p {
+    margin: 6px;
+  }
+}
+
+
+agm-map {
+  height: 200px;
+  margin: 10px;
+}

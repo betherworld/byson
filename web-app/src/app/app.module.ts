@@ -12,6 +12,8 @@ import { RangerDashboardComponent } from './ranger-dashboard/ranger-dashboard.co
 import { RangerVotingComponent } from './ranger-voting/ranger-voting.component';
 import { DonorImpactDashboardComponent } from './donor-impact-dashboard/donor-impact-dashboard.component';
 import { DonorHomeComponent } from './donor-home/donor-home.component';
+import { AgmCoreModule } from '@agm/core';
+import { RangerProofComponent } from './ranger-proof/ranger-proof.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { DonorHomeComponent } from './donor-home/donor-home.component';
     RangerDashboardComponent,
     RangerVotingComponent,
     DonorImpactDashboardComponent,
-    DonorHomeComponent
+    DonorHomeComponent,
+    RangerProofComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,9 @@ import { DonorHomeComponent } from './donor-home/donor-home.component';
 
     CollapseModule.forRoot(),
     ProgressbarModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCaR1e6VL8iLDrJL0-NFN49WRCg3-_o-nY'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

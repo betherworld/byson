@@ -1,1 +1,34 @@
 <app-donor-header></app-donor-header>
+
+<div *ngIf="bison">
+
+    <h3 class="block-header">My BIOson</h3>
+
+    <div class="block1">
+        <div class="block1__img">
+            <img src="assets/{{ bison.image }}">
+        </div>
+        <div class="block1__text">
+            <p><span class="emp-text">Name:</span> {{ bison.name }}</p>
+            <p><span class="emp-text">Age:</span> {{ bison.age }}</p>
+            <p><span class="emp-text">Area:</span> {{ bison.area }}</p>
+        </div>
+    </div>
+
+
+    <h3 class="block-header">Find {{ bison.name }}</h3>
+
+    <div class="block">
+        <agm-map
+            [latitude]="lat"
+            [longitude]="lng"
+            [clickableIcons]="false"
+        >
+            <agm-marker
+                [latitude]="lat"
+                [longitude]="lng"
+                iconUrl="assets/{{ bison.icon }}"
+            ></agm-marker>
+        </agm-map>
+    </div>
+</div>

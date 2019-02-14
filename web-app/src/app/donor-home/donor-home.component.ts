@@ -17,12 +17,12 @@ export class DonorHomeComponent implements OnInit {
     level: 1,
     donated: 7.806,
     bisonCollection: [
-      { id: 1, image: 'token_bison1.png' },
+      { id: '1', image: 'token_bison1.png' },
     ],
     wildLifeCollection: [
-      { id: 1000, image: 'token_bird.png' },
-      { id: 1001, image: 'token_bear.png' },
-      { id: 1002, image: 'token_fox.png' },
+      { id: '1000', image: 'token_bird.png' },
+      { id: '1001', image: 'token_bear.png' },
+      { id: '1002', image: 'token_fox.png' },
     ],
     statistics2019: {
       co2Reduction: '3T',
