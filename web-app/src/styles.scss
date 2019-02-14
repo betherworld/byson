@@ -41,3 +41,19 @@ a {
   color: $red;
   font-weight: bold;
 }
+
+
+.sep-line {
+  margin: 10px 0 10px 10px;
+  border-bottom: 1px solid gray;
+}
+
+
+.block-header {
+  margin-left: 10px;
+}
+
+
+.block {
+  margin: 0 10px 0 10px;
+}
