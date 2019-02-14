@@ -17,17 +17,4 @@ contract FundManager {
 	// allows wwf employees to disburs bonus community development fund
 	// ****add interaction with voting, community, etc...****
 	function payCommProj(address payable recipient, uint amount, string memory purpose) public;
-
-	// change project manager, careful (only reversibel by new address)
-	function switchManager(address account) public;
-
-	// provide viewing access to funds
-	function getConFund() public view returns(uint);
-
-	// provide viewing access to funds
-	function getDevFund() public view returns(uint);
-
-	function setHuntContrAddr(address account) public;
-
-	function setProjManager(address account) public;
 }

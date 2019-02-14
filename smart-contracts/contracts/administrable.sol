@@ -32,7 +32,7 @@ contract administrable{
 	// modify wwf employee list, only allowed by project manager
 	function delEmployee(uint id) public {
 		require(msg.sender == projManager);
-		require(id >= 0 && id < numadmins, "Invalid admin id!");
+		require(id < numadmins, "Invalid admin id!");
 		emit honorablyDischarged(admins[id].addr, admins[id].name);
 		hashmins[admins[id].addr] = false;
 		admins[id] = admins[numadmins-1];

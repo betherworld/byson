@@ -3,9 +3,10 @@ pragma solidity ^0.5.2;
 import "./administrable.sol";
 
 contract FundManager is administrable {
-	uint devFund = 0;
-	uint conFund = 0;
-	address huntContrAddress;
+	uint devFund = 0;			// community development fund
+	uint conFund = 0;			// conservation efforts fund
+	address huntContrAddress;	// address of contract responsible for hunter/gatherer interactions
+	address votingContrAddress; // address of contract responsible for community project voting
 
 	event donationReceived(address donor, uint amount, uint8 perc);
 	event costsPayed(address amdin, uint amount, string category, string purpose);
@@ -42,7 +43,8 @@ contract FundManager is administrable {
 
 	// allows wwf employees to disburs bonus community development fund
 	// ****add interaction with voting, community, etc...****
-	function payCommProj(address payable recipient, uint amount, string memory purpose) public restricted{
+	function payCommProj(address payable recipient, uint amount, string memory purpose) public {
+		require(msg.sender == votingContrAddress);
 		require(amount <= conFund, "Out of funds!");
 		emit bonusDisbursed(msg.sender, amount, purpose);
 		devFund -= amount;
@@ -59,11 +61,19 @@ contract FundManager is administrable {
 		return devFund;
 	}
 
+	// one-time executable functions to set priviliged contract addresses
 	function setHuntContrAddr(address account) public {
 	    require(huntContrAddress == address(0), "Can only be set once!");
 	    huntContrAddress = account;
 	}
 
+	// one-time executable functions to set priviliged contract addresses
+	function setVotingContrAddr(address account) public {
+	    require(votingContrAddress == address(0), "Can only be set once!");
+	    votingContrAddress = account;
+	}
+
+	// one-time executable functions to set priviliged project manager
 	function setProjManager(address account) public {
 	    require(projManager == address(0), "Can only be set once!");
 	    projManager = account;
